@@ -77,19 +77,19 @@ inline Standard_Boolean IsSimilar(const Standard_Character One,
 // IsAlphabetic : Returns Standard_True if a character is alphabetic
 // ==================================================================
 inline Standard_Boolean IsAlphabetic(const Standard_Character me) 
-{ return isalpha((unsigned char)me); }
+{ return isalpha((unsigned char)me) != 0; }
 
 // ==================================================================
 // IsDigit : Returns Standard_True if a character is a digit
 // ==================================================================
 inline Standard_Boolean IsDigit(const Standard_Character me) 
-{ return isdigit((unsigned char)me); }
+{ return isdigit((unsigned char)me) != 0; }
 
 // ==================================================================
 // IsXDigit : Returns Standard_True if a character is a digit
 // ==================================================================
 inline Standard_Boolean IsXDigit(const Standard_Character me) 
-{ return isxdigit((unsigned char)me); }
+{ return isxdigit((unsigned char)me) != 0; }
 
 // ==================================================================
 // IsAlphanumeric : Returns Standard_True if a character is alphanumeric
@@ -101,26 +101,26 @@ inline Standard_Boolean IsAlphanumeric(const Standard_Character me)
 // IsControl : Returns Standard_True if a character  is a control character
 // ==================================================================
 inline Standard_Boolean IsControl(const Standard_Character me) 
-{ return iscntrl((unsigned char)me); }
+{ return iscntrl((unsigned char)me) != 0; }
 
 
 // ==================================================================
 // IsGraphic : Returns Standard_True if a character is graphic
 // ==================================================================
 inline Standard_Boolean IsGraphic(const Standard_Character me) 
-{ return isgraph((unsigned char)me); }
+{ return isgraph((unsigned char)me) != 0; }
 
 // ==================================================================
 // IsLowerCase : Returns Standard_True if a character is lowercase
 // ==================================================================
 inline Standard_Boolean IsLowerCase(const Standard_Character me) 
-{ return islower((unsigned char)me); }
+{ return islower((unsigned char)me) != 0; }
 
 // ==================================================================
 // IsPrintable : Returns Standard_True if a character is printable
 // ==================================================================
 inline Standard_Boolean IsPrintable(const Standard_Character me) 
-{ return isprint((unsigned char)me); }
+{ return isprint((unsigned char)me) != 0; }
 
 // ==================================================================
 // IsPunctuation : Returns Standard_True if a character is a graphic and 
@@ -133,13 +133,13 @@ inline Standard_Boolean IsPunctuation(const Standard_Character me)
 // IsSpace : Returns Standard_True if a character is a space
 // ==================================================================
 inline Standard_Boolean IsSpace(const Standard_Character me) 
-{ return isspace((unsigned char)me); }
+{ return isspace((unsigned char)me) != 0; }
 
 // ==================================================================
 // IsUppercase : Returns Standard_True if a character is uppercase
 // ==================================================================
 inline Standard_Boolean IsUpperCase(const Standard_Character me) 
-{ return isupper((unsigned char)me); }
+{ return isupper((unsigned char)me) != 0; }
 
 // ==================================================================
 // LowerCase : Returns a lowercase character
