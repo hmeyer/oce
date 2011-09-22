@@ -1,0 +1,12 @@
+Source: liboce
+Section: universe/graphics
+Priority: extra
+Maintainer: Henning Meyer <hmeyer@gmx.eu>
+Build-Depends: cdbs, debhelper (>= 7), cmake, libxmu-dev, libtbb-dev, libfreimage-dev, libfreetype6-dev, libftgl-dev
+Standards-Version: 3.9.1
+
+Package: liboce
+Architecture: i386 amd64
+Depends: ${misc:Depends}
+#Recommends: python-qt4 | python-wxgtk2.6 | python-wxgtk2.8
+Description: oce stands for *o*pencascade *c*ommunity *e*dition. This project aims at gathering patches/changes/improvements from the OCC community over the latest release (currently OCCT 6.5.1).
