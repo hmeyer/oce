@@ -129,7 +129,7 @@ IF( NOT DEFINED ${PROJECT_NAME}_INSTALL_PREFIX )
 			"c:/${PROJECT_NAME}-${${PROJECT_NAME}_VERSION}")
 	ELSE( WIN32 )
 		SET(${PROJECT_NAME}_INSTALL_PREFIX
-			"/usr/local")
+			"/usr")
 	ENDIF( WIN32 )
 ENDIF( NOT DEFINED ${PROJECT_NAME}_INSTALL_PREFIX )
 
@@ -652,7 +652,7 @@ IF(MSVC_IDE)
 	ENDIF( NOT ${PROJECT_NAME}_USE_MSVC_EXPRESS)
 ENDIF(MSVC_IDE)
 
-# Libraries are installed by default in /usr/local/lib on UNIX
+# Libraries are installed by default in /usr/lib on UNIX
 # based platforms and c:/${PROJECT_NAME}-VERSION/Win[32|64]/lib on windows based
 # platforms
 
