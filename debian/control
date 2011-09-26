@@ -8,12 +8,14 @@ Section: libs
 Homepage: https://github.com/tpaviot/oce
 
 Package: liboce
+Section: libs
 Architecture: any
 Depends: ${misc:Depends}, libxmu6, libfreetype6, libftgl2
 Description: oce stands for *o*pencascade *c*ommunity *e*dition.
  This project aims at gathering patches/changes/improvements from the OCC community over the latest release (currently OCCT 6.5.1).
 
 Package: liboce-dev
+Section: libdevel
 Architecture: all
 Depends: liboce (= ${binary:Version})
 Description: oce stands for *o*pencascade *c*ommunity *e*dition.
