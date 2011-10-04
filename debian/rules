@@ -4,6 +4,8 @@
 #DEB_CMAKE_INSTALL_PREFIX ?= /usr
 C_CC = $(shell which /usr/local/bin/$(CC))
 C_CXX = $(shell which /usr/local/bin/$(CXX))
+CFLAGS = 
+CXXFLAGS =
 DEB_CMAKE_NORMAL_ARGS ?= -DCMAKE_C_COMPILER:FILEPATH="$(C_CC)" -DCMAKE_CXX_COMPILER:FILEPATH="$(C_CXX)"
 DH_VERBOSE=1
 #DESTDIR=$(CURDIR)/debian/tmp
