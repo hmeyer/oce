@@ -1,23 +1,74 @@
 #!/usr/bin/make -f
 
-CMAKE ?= cmake
-DEB_CMAKE_INSTALL_PREFIX ?= /usr
-DEB_CMAKE_NORMAL_ARGS ?= -DCMAKE_INSTALL_PREFIX="$(DEB_CMAKE_INSTALL_PREFIX)" -DCMAKE_C_COMPILER:FILEPATH="$(CC)" -DCMAKE_CXX_COMPILER:FILEPATH="$(CXX)" -DCMAKE_C_FLAGS="$(CFLAGS)" -DCMAKE_CXX_FLAGS="$(CXXFLAGS)" -DCMAKE_SKIP_RPATH=ON -DCMAKE_VERBOSE_MAKEFILE=ON
-export DH_VERBOSE=1
-DESTDIR=$(CURDIR)/debian/tmp
-DEB_SRCDIR=src
+#CMAKE ?= cmake
+#DEB_CMAKE_INSTALL_PREFIX ?= /usr
+C_CC = $(shell which /usr/local/bin/$(CC))
+C_CXX = $(shell which /usr/local/bin/$(CXX))
+DEB_CMAKE_NORMAL_ARGS ?= -DCMAKE_C_COMPILER:FILEPATH="$(C_CC)" -DCMAKE_CXX_COMPILER:FILEPATH="$(C_CXX)"
+DH_VERBOSE=1
+#DESTDIR=$(CURDIR)/debian/tmp
+#DEB_SRCDIR=.
 
-DEB_MAKE_BUILD_TARGET += -j4
+BUILD_FLAGS = -j8
+
+#DEB_BUILD_OPTIONS = "parallel=8"
+#DH_OPTIONS = "--parallel"
 
 clean:
-	rm -rf $(DESTDIR)
+	dh_testdir
+	dh_auto_clean
+	rm -rf debian/tmp
+	rm -rf debian/liboce*
+	rm -rf debian/liboce-dev*
+	echo ####################################################
 
-$(DESTDIR)/CMakeCache.txt:
-	cd $(DESTDIR) && $(CMAKE) $(CURDIR)/$(DEB_SRCDIR) $(DEB_CMAKE_NORMAL_ARGS) $(DEB_CMAKE_EXTRA_FLAGS)
 
-build: $(DESTDIR)/CMakeCache.txt
+build: build-stamp
+
+build-stamp: 
+	dh_testdir
+	# Add here commands to compile the package.
+	dh_auto_configure -- $(DEB_CMAKE_NORMAL_ARGS)
+	dh_auto_build -- $(BUILD_FLAGS)
+	touch build-stamp
+	echo ####################################################
+
+
+
+
+install: build
+	dh_testdir
+	dh_clean
+	dh_installdirs
+	$(MAKE) install DESTDIR=$(CURDIR)/debian/tmp
+	dh_install -s -i --sourcedir=debian/tmp
+	dh_makeshlibs -v -pliboce
+
+
+binary-arch: build install
+	dh_testdir
+	dh_installchangelogs ChangeLog
+	dh_installdocs
+	dh_installexamples
+	dh_installman
+	dh_strip
+	dh_compress
+##	dh_link -p gmp-ecm usr/share/man/man1/ecm.1.gz usr/share/man/man1/gmp-ecm.1.gz
+	dh_fixperms
+	dh_installdeb
+	dh_shlibdeps
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+	
+binary: binary-indep binary-arch
 
 %:
+	echo ####################################################
+	echo $@ ################
+	echo ####################################################
 	dh $@
+	echo ####################################################
 
 .PHONY: clean build 
