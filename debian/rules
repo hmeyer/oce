@@ -36,33 +36,33 @@ build-stamp:
 
 
 
-install: build
-	dh_testdir
-	dh_clean
-	dh_installdirs
-	$(MAKE) install DESTDIR=$(CURDIR)/debian/tmp
-	dh_install -s -i --sourcedir=debian/tmp
-	dh_makeshlibs -v -pliboce
-
-
-binary-arch: build install
-	dh_testdir
-	dh_installchangelogs ChangeLog
-	dh_installdocs
-	dh_installexamples
-	dh_installman
-	dh_strip
-	dh_compress
-##	dh_link -p gmp-ecm usr/share/man/man1/ecm.1.gz usr/share/man/man1/gmp-ecm.1.gz
-	dh_fixperms
-	dh_installdeb
-	dh_shlibdeps
-	dh_gencontrol
-	dh_md5sums
-	dh_builddeb
-
-	
-binary: binary-indep binary-arch
+#install: build
+#	dh_testdir
+#	dh_clean
+#	dh_installdirs
+#	$(MAKE) install DESTDIR=$(CURDIR)/debian/tmp
+#	dh_install -s -i --sourcedir=debian/tmp
+#	dh_makeshlibs -v -pliboce
+#
+#
+#binary-arch: build install
+#	dh_testdir
+#	dh_installchangelogs ChangeLog
+#	dh_installdocs
+#	dh_installexamples
+#	dh_installman
+#	dh_strip
+#	dh_compress
+###	dh_link -p gmp-ecm usr/share/man/man1/ecm.1.gz usr/share/man/man1/gmp-ecm.1.gz
+#	dh_fixperms
+#	dh_installdeb
+#	dh_shlibdeps
+#	dh_gencontrol
+#	dh_md5sums
+#	dh_builddeb
+#
+#	
+#binary: binary-indep binary-arch
 
 %:
 	echo ####################################################
