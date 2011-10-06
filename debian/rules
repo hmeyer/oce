@@ -13,8 +13,9 @@ clean:
 	dh_testdir
 	dh_auto_clean
 	rm -rf debian/tmp
-	rm -rf debian/liboce*
-	rm -rf debian/liboce-dev*
+	rm -rf debian/liboce*.[sd]*
+	rm -rf debian/liboce
+	rm -rf debian/liboce-dev
 	echo ####################################################
 
 
