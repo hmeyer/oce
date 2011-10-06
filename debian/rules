@@ -1,10 +1,5 @@
 #!/usr/bin/make -f
 
-#CMAKE ?= cmake
-#DEB_CMAKE_INSTALL_PREFIX ?= /usr
-C_CC = $(shell which /usr/local/bin/$(CC))
-C_CXX = $(shell which /usr/local/bin/$(CXX))
-DEB_CMAKE_NORMAL_ARGS ?= -DCMAKE_C_COMPILER:FILEPATH="$(C_CC)" -DCMAKE_CXX_COMPILER:FILEPATH="$(C_CXX)"
 DH_VERBOSE=1
 #DESTDIR=$(CURDIR)/debian/tmp
 #DEB_SRCDIR=.
@@ -28,7 +23,7 @@ build: build-stamp
 build-stamp: 
 	dh_testdir
 	# Add here commands to compile the package.
-	dh_auto_configure -- $(DEB_CMAKE_NORMAL_ARGS)
+	dh_auto_configure
 	dh_auto_build -- $(BUILD_FLAGS)
 	touch build-stamp
 	echo ####################################################
@@ -63,6 +58,53 @@ build-stamp:
 #
 #	
 #binary: binary-indep binary-arch
+binary:
+	dh_testroot
+	dh_prep
+	dh_installdirs
+	dh_auto_install
+	dh_install -v --fail-missing
+	dh_installdocs
+	dh_installchangelogs
+	dh_installexamples
+	dh_installman
+	dh_installcatalogs
+	dh_installcron
+	dh_installdebconf
+	dh_installemacsen
+	dh_installifupdown
+	dh_installinfo
+	dh_pysupport
+	dh_installinit
+	dh_installmenu
+	dh_installmime
+	dh_installmodules
+	dh_installlogcheck
+	dh_installlogrotate
+	dh_installpam
+	dh_installppp
+	dh_installudev
+	dh_installwm
+	dh_installxfonts
+	dh_bugfiles
+	dh_lintian
+	dh_gconf
+	dh_icons
+	dh_perl
+	dh_usrlocal
+	dh_link
+	dh_compress
+	dh_fixperms
+	dh_strip
+	dh_makeshlibs
+	dh_shlibdeps
+	dh_installdeb
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+
+
 
 %:
 	echo ####################################################
