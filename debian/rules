@@ -2,11 +2,6 @@
 
 DH_VERBOSE=1
 
-BUILD_FLAGS = -j8
-
-#DEB_BUILD_OPTIONS = "parallel=8"
-#DH_OPTIONS = "--parallel"
-
 clean:
 	dh_testdir
 	dh_auto_clean
