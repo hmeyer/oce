@@ -1,6 +1,6 @@
 #!/bin/sh
 
-git-buildpackage -S --git-tag
+git-buildpackage --git-ignore-new -S --git-tag
 #DIST=natty git-buildpackage --git-ignore-new --git-tag
 
 dh clean
