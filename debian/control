@@ -11,6 +11,7 @@ Package: liboce
 Section: libs
 Architecture: any
 Depends: ${misc:Depends}, libxmu6, libfreetype6, libftgl2
+Conflicts: libopencascade-foundation-6.3.0, libopencascade-modeling-6.3.0, libopencascade-ocaf-6.3.0, libopencascade-ocaf-lite-6.3.0, libopencascade-visualization-6.3.0
 Description: oce stands for *o*pencascade *c*ommunity *e*dition.
  This project aims at gathering patches/changes/improvements from the OCC community over the latest release (currently OCCT 6.5.1).
 
