@@ -1,2 +1,2 @@
-usr/lib/*
+usr/lib/*.so*
 usr/share/*/*/*/*

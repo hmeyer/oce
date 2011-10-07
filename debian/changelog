@@ -1,3 +1,15 @@
+liboce (0.6.0-0ubuntu3) natty; urgency=low
+
+  * refined liboce file list
+
+ -- Henning Meyer <hmeyer@gmx.eu>  Sat, 08 Oct 2011 00:40:34 +0200
+
+liboce (0.6.0-0ubuntu2) natty; urgency=low
+
+  * updated conflicts 
+
+ -- Henning Meyer <hmeyer@gmx.eu>  Fri, 07 Oct 2011 16:10:44 +0200
+
 liboce (0.6.0-0ubuntu1) natty; urgency=low
 
   * merge OCE-0.6.0 
