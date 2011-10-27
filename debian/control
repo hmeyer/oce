@@ -7,7 +7,7 @@ Standards-Version: 3.9.1
 Section: libs
 Homepage: https://github.com/tpaviot/oce
 
-Package: liboce
+Package: liboce1
 Section: libs
 Architecture: any
 Depends: ${misc:Depends}, libxmu6, libfreetype6, libftgl2
