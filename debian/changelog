@@ -1,3 +1,10 @@
+liboce (0.6.0-0ubuntu8) oneiric; urgency=low
+
+  * fixed -dev dep 
+  * added 6.5.0 conflict
+
+ -- Henning Meyer <hmeyer@gmx.eu>  Mon, 31 Oct 2011 08:48:45 +0100
+
 liboce (0.6.0-0ubuntu7) oneiric; urgency=low
 
   * symlinks in dev were breaking things.. 

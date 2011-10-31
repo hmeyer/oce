@@ -11,14 +11,14 @@ Package: liboce1
 Section: libs
 Architecture: any
 Depends: ${misc:Depends}, libxmu6, libfreetype6, libftgl2
-Conflicts: libopencascade-foundation-6.3.0, libopencascade-modeling-6.3.0, libopencascade-ocaf-6.3.0, libopencascade-ocaf-lite-6.3.0, libopencascade-visualization-6.3.0
+Conflicts: libopencascade-foundation-6.3.0, libopencascade-modeling-6.3.0, libopencascade-ocaf-6.3.0, libopencascade-ocaf-lite-6.3.0, libopencascade-visualization-6.3.0, libopencascade-foundation-6.5.0, libopencascade-modeling-6.5.0, libopencascade-ocaf-6.5.0, libopencascade-ocaf-lite-6.5.0, libopencascade-visualization-6.5.0
 Description: oce stands for *o*pencascade *c*ommunity *e*dition.
  This project aims at gathering patches/changes/improvements from the OCC community over the latest release (currently OCCT 6.5.1).
 
 Package: liboce-dev
 Section: libdevel
 Architecture: all
-Depends: liboce (= ${binary:Version})
+Depends: liboce1 (= ${binary:Version})
 Conflicts: libopencascade-dev, libopencascade-foundation-dev, libopencascade-modeling-dev, libopencascade-ocaf-dev,libopencascade-ocaf-lite-dev,libopencascade-visualization-dev
 Description: oce stands for *o*pencascade *c*ommunity *e*dition.
  This project aims at gathering patches/changes/improvements from the OCC community over the latest release (currently OCCT 6.5.1).
