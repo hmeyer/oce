@@ -1,3 +1,10 @@
+liboce (0.6.0-0ubuntu9) oneiric; urgency=low
+
+  * fix symlinks
+  * fix dev arch
+
+ -- Henning Meyer <hmeyer@gmx.eu>  Wed, 02 Nov 2011 20:44:34 +0100
+
 liboce (0.6.0-0ubuntu8) oneiric; urgency=low
 
   * fixed -dev dep 

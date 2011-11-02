@@ -17,7 +17,7 @@ Description: oce stands for *o*pencascade *c*ommunity *e*dition.
 
 Package: liboce-dev
 Section: libdevel
-Architecture: all
+Architecture: any
 Depends: liboce1 (= ${binary:Version})
 Conflicts: libopencascade-dev, libopencascade-foundation-dev, libopencascade-modeling-dev, libopencascade-ocaf-dev,libopencascade-ocaf-lite-dev,libopencascade-visualization-dev
 Description: oce stands for *o*pencascade *c*ommunity *e*dition.

@@ -1,3 +1,2 @@
-#usr/lib/*.so.[0-9].*
-usr/lib/*.so*
+usr/lib/*.so.[0-9]*
 usr/share/*/*/*/*
