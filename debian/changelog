@@ -1,3 +1,9 @@
+liboce (0.6.0-0ubuntu12) maverick; urgency=low
+
+  * natty upload 
+
+ -- Henning Meyer <hmeyer@gmx.eu>  Mon, 07 Nov 2011 23:20:30 +0100
+
 liboce (0.6.0-0ubuntu11) maverick; urgency=low
 
   * maverick upload 
