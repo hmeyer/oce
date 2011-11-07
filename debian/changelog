@@ -1,3 +1,9 @@
+liboce (0.6.0-0ubuntu13) oneiric; urgency=low
+
+  * oneiric upload 
+
+ -- Henning Meyer <hmeyer@gmx.eu>  Mon, 07 Nov 2011 23:25:52 +0100
+
 liboce (0.6.0-0ubuntu12) natty; urgency=low
 
   * natty upload 
