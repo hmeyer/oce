@@ -1,7 +1,7 @@
 Source: liboce
 Priority: extra
 Maintainer: Henning Meyer <hmeyer@gmx.eu>
-Build-Depends: cdbs, debhelper (>= 7), cmake, libxmu-dev, libfreetype6-dev, libftgl-dev
+Build-Depends: debhelper (>= 7), cmake, libxmu-dev, libfreetype6-dev, libftgl-dev
 #, libtbb-dev, libfreeimage-dev
 Standards-Version: 3.9.1
 Section: libs
@@ -17,7 +17,7 @@ Description: oce stands for *o*pencascade *c*ommunity *e*dition.
 
 Package: liboce-dev
 Section: libdevel
-Architecture: any
+Architecture: all
 Depends: liboce1 (= ${binary:Version})
 Conflicts: libopencascade-dev, libopencascade-foundation-dev, libopencascade-modeling-dev, libopencascade-ocaf-dev,libopencascade-ocaf-lite-dev,libopencascade-visualization-dev
 Description: oce stands for *o*pencascade *c*ommunity *e*dition.

@@ -1,3 +1,10 @@
+liboce (0.6.0-0ubuntu10) lucid; urgency=low
+
+  * lucid upload
+  * dev back to arch:all 
+
+ -- Henning Meyer <hmeyer@gmx.eu>  Mon, 07 Nov 2011 08:00:55 +0100
+
 liboce (0.6.0-0ubuntu9) oneiric; urgency=low
 
   * fix symlinks
