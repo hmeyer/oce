@@ -1,3 +1,9 @@
+liboce (0.6.0-0ubuntu14) natty; urgency=low
+
+  * dev back to arch:any, in hope to fix natty64 build error 
+
+ -- Henning Meyer <hmeyer@gmx.eu>  Tue, 08 Nov 2011 11:03:24 +0100
+
 liboce (0.6.0-0ubuntu13) oneiric; urgency=low
 
   * oneiric upload 
