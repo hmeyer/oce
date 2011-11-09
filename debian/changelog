@@ -1,3 +1,9 @@
+liboce (0.6.0-0ubuntu17) maverick; urgency=low
+
+  * maverick upload 
+
+ -- Henning Meyer <hmeyer@gmx.eu>  Wed, 09 Nov 2011 21:39:13 +0100
+
 liboce (0.6.0-0ubuntu16) lucid; urgency=low
 
   * lucid upload 
