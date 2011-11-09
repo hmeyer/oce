@@ -1,3 +1,9 @@
+liboce (0.6.0-0ubuntu16) lucid; urgency=low
+
+  * lucid upload 
+
+ -- Henning Meyer <hmeyer@gmx.eu>  Wed, 09 Nov 2011 21:37:20 +0100
+
 liboce (0.6.0-0ubuntu15) oneiric; urgency=low
 
   * oneiric upload 
